@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
+    <link href="index.css" rel="stylesheet">
+</head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom  ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">SHREEJI ENGINEERING</a>
+            <a class="navbar-brand" href="index.php">SHREEJI ENGINEERING</a>    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -25,6 +26,10 @@
                         <a class="nav-link active" aria-current="page" href="login.php">LOGIN</a>
                     </li>
                 </ul>
+                <form class="d-flex mt-3" role="search">
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
             </div>
         </div>
     </nav>
