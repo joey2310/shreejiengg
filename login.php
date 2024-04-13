@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div id = "form">
         <h1>Login Form</h1>
-        <form name = "form" action="login.php" onsubmit="return isvalid()" method ="POST">
+        <form name = "form" action="login1.php" onsubmit="return isvalid()" method ="POST">
         <label>Username: </label>
         <input type="text" id="user" name="user"></input>
         <br>
