@@ -9,12 +9,13 @@
   <body>
   <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
-  <img src="\xampp\htdocs\shreeji\se logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+  <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
     <a class="navbar-brand" href="index.php"><h2>Shreeji Engineering</h2></a>
     <form class="d-flex mt-1" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
+<a class="btn btn-outline-success" type="submit" href="index.php">SignOut</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,14 +56,11 @@
 <br>
 <br>
 <br>
-<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add New Material for Dispatch
 </button>
-
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-l">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Material for Dispatch</h1>
@@ -70,24 +68,25 @@
       </div>
       <div class="modal-body">
       <div >
-        <form name="form" action="dispatch1.php" method="POST">
-            <div class="mb-3">
-            <input type="date" id="user" name="user" placeholder="Date" required><br><br>
-            </div>
-            <div class="mb-3">
-            <input type="number" id="num1" name="num1" placeholder="#" required><br><br>
-            </div>
-            <div class="mb-3">
-            <input type="number" id="sap" name="sap" placeholder="Sap Code" required><br><br>
-            </div>
-            <div class="mb-3">    
-            <input type="number" id="disqty" name="disqty" placeholder="Dispatch Quantity" required><br><br>
-            </div>
-        </form>
+      <div id = "form">
+        <form name = "form" action="login1.php" onsubmit="return isvalid()" method ="POST">
+        <label> Date </label>
+        <input type="text" id="user" name="user"></input>
+        <br>
+        <label> # </label>
+        <input type="password" id="pass" name="pass"></input>
+        <br>
+        <label> Sap Code </label>
+        <input type="password" id="pass" name="pass"></input>
+        <br>
+        <label> Dispatch Qty </label>
+        <input type="password" id="pass" name="pass"></input>
+        <br>
+      </form>
+     </div>
     </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Add</button>
       </div>
     </div>

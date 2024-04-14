@@ -22,7 +22,6 @@
         <br>
         <br>
         <input type="submit" id="btn" value="Login" name="submit"></input>
-        
     </form>
 </div>
 <script>

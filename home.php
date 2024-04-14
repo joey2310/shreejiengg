@@ -9,7 +9,7 @@
   <body>
 <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
-  <img src="\xampp\htdocs\shreeji\se logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+  <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
     <a class="navbar-brand" href="index.php"><h2>Shreeji Engineering</h2></a>
     <form class="d-flex mt-1" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
