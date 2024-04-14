@@ -67,24 +67,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <div >
-      <div id = "form">
-        <form name = "form" action="login1.php" onsubmit="return isvalid()" method ="POST">
-        <label> Date </label>
-        <input type="text" id="user" name="user"></input>
-        <br>
-        <label> # </label>
-        <input type="password" id="pass" name="pass"></input>
-        <br>
-        <label> Sap Code </label>
-        <input type="password" id="pass" name="pass"></input>
-        <br>
-        <label> Dispatch Qty </label>
-        <input type="password" id="pass" name="pass"></input>
-        <br>
-      </form>
-     </div>
-    </div>
+      <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Date</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+  <label for="floatingPassword">#</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Sap Code</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+  <label for="floatingPassword">Dispatch Qty</label>
+</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Add</button>
