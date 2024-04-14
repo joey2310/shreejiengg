@@ -13,33 +13,33 @@
   <body>
     <div id="form">
         <h1 id="heading">SignUp Form</h1><br>
-        <form class="row g-3">
+        <form class="row g-3" action="signup1.php" onsubmit="return isvalid()" method ="POST">
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationDefault01" required>
+    <input type="text" class="form-control" id="firstName" name="firstName" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefault02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationDefault02" required>
+    <input type="text" class="form-control" id="lastName" name="lastName" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefaultUsername" class="form-label">Username</label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend2">@</span>
-      <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control" id="username" name="username" aria-describedby="inputGroupPrepend2" required>
     </div>
   </div>
   <div class="col-md-4">
     <label for="validationDefault03" class="form-label">Date of Birth</label>
-    <input type="date" class="form-control" id="validationDefault03" required>
+    <input type="date" class="form-control" id="dob" name="dob" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefault04" class="form-label">Email ID</label>
-    <input type="email" class="form-control" id="validationDefault03" required>
+    <input type="email" class="form-control" id="email" name="email" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefault05" class="form-label">Password</label>
-    <input type="password" class="form-control" id="validationDefault03" required>
+    <input type="password" class="form-control" id="password" name="password" required>
   </div>
   <div class="col-15">
     <div class="form-check">
@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" type="submit" name="submit">Submit form</button>
   </div>
 </form>
     </div>
