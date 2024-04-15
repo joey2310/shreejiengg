@@ -1,9 +1,12 @@
+<?php
+    include("connection.php");
+?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Dispatch</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
@@ -15,7 +18,7 @@
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
-<a class="btn btn-outline-success" type="submit" href="index.php">SignOut</a>
+<a class="btn btn-outline-success" type="submit" href="index.php">LogOut</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -119,58 +122,34 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>02/04/2022</td>
-      <td>SENG/22-23/001</td>
-      <td>1</td>
-      <td>OVAL 2840</td>
-      <td>1000018886</td>
-      <td>20</td>
-      <td>0</td>
-      <td>20</td>
-      <td>13</td>
-      <td>1</td>
-      <td>Idler Pulley Shaft</td>
-      <td><button class="btn btn-success btn-primary btn-sm" type="submit" name="submit">Update</button>
-        <a class="btn btn-info btn-danger btn-sm" type="submit" name="cancel">Delete</a><br>
-        </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>02/04/2022</td>
-      <td>SENG/22-23/001</td>
-      <td>2</td>
-      <td>OVAL 2840</td>
-      <td>1000018890</td>
-      <td>20</td>
-      <td>0</td>
-      <td>20</td>
-      <td>18</td>
-      <td>6</td>
-      <td>Ring For Idler Pulley</td>
-      <td><button class="btn btn-success btn-primary btn-sm" type="submit" name="submit">Update</button>
-        <a class="btn btn-info btn-danger btn-sm" type="submit" name="cancel">Delete</a><br>
-        </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>02/04/2022</td>
-      <td>SENG/22-23/001</td>
-      <td>3</td>
-      <td>Textile Regular</td>
-      <td>1000018891</td>
-      <td>12</td>
-      <td>2</td>
-      <td>24</td>
-      <td>4</td>
-      <td>8</td>
-      <td>Washer For Idler Pulley</td>
-      <td><button class="btn btn-success btn-primary btn-sm" type="submit" name="submit">Update</button>
-        <a class="btn btn-info btn-danger btn-sm" type="submit" name="cancel">Delete</a><br>
-        </td>
-    </tr>
-  </tbody>
+  <?php
+
+  $sql = "SELECT * FROM dispatch";
+  $result = mysqli_query($conn, $sql);
+
+  if(!$result){
+    die("INVALID QUERY:".$conn->error);
+  }
+
+  while($row = $result->fetch_assoc()){
+  echo"
+  <tr>
+    <td>" . $row["id"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["challan"]. "</td>
+    <td>" . $row["num"]. "</td>
+    <td>" . $row["num"]. "</td>
+    <td>" . $row["sap"]. "</td>
+    <td>" . $row["dispatchqty"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["date"]. "</td>
+</tr>";
+  }
+?> 
+</tbody>
 </table>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
