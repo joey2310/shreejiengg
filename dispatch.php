@@ -66,27 +66,33 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Material for Dispatch</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form class="row g-3" action="dispatch1.php" onsubmit="return isvalid()" method ="POST">
       <div class="modal-body">
-      <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <div class="form-floating mb-5">
+  <input type="date" class="form-control" id="floatingInput" name="date" placeholder="name@example.com">
   <label for="floatingInput">Date</label>
 </div>
-<div class="form-floating">
-  <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingPassword" name="challan" placeholder="Password">
+  <label for="floatingPassword">Challan No.</label>
+</div>
+<div class="form-floating mb-5">
+  <input type="number" class="form-control" id="floatingPassword" name="num" placeholder="Password">
   <label for="floatingPassword">#</label>
 </div>
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingInput" name="sap" placeholder="name@example.com">
   <label for="floatingInput">Sap Code</label>
 </div>
-<div class="form-floating">
-  <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingPassword" name="dispatchqty" placeholder="Password">
   <label for="floatingPassword">Dispatch Qty</label>
 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Add</button>
+        <button type="submit" name="submit" class="btn btn-primary">Add</button>
       </div>
+</form>
     </div>
   </div>
 </div>
