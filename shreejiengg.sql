@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2024 at 07:23 AM
+-- Generation Time: Apr 15, 2024 at 08:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,23 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Table structure for table `dispatch`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE `dispatch` (
   `id` int(255) NOT NULL,
-  `username` varchar(150) NOT NULL,
-  `password` varchar(150) NOT NULL
+  `date` date NOT NULL,
+  `challan` varchar(150) NOT NULL,
+  `num` int(11) NOT NULL,
+  `machine` varchar(255) NOT NULL,
+  `sap` int(11) NOT NULL,
+  `dispatchqty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `dispatch`
 --
 
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, 'pratsbhagat', 'pratsbhagat'),
-(2, 'admin', 'admin'),
-(3, 'rurubhagat', 'rurubhagat');
+INSERT INTO `dispatch` (`id`, `date`, `challan`, `num`, `machine`, `sap`, `dispatchqty`) VALUES
+(1, '2022-04-02', 'SENG/22-23/001', 1, '', 1000018886, 20),
+(5, '2022-04-02', 'SENG/22-23/001', 2, '', 1000018890, 20);
 
 -- --------------------------------------------------------
 
@@ -49,29 +52,30 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `signup` (
-  `id` int(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `username` varchar(150) NOT NULL,
+  `id` int(11) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `dob` date NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `repassword` varchar(10) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `signup`
 --
 
-INSERT INTO `signup` (`id`, `name`, `username`, `dob`, `password`, `repassword`) VALUES
-(1, 'Pratik', 'prats23', '0000-00-00', 'prats23', 'prats23');
+INSERT INTO `signup` (`id`, `firstName`, `lastName`, `username`, `dob`, `email`, `password`) VALUES
+(2, 'Pratik', 'Bhagat', 'joey2310', '1998-10-23', 'bhagatpratik23@gmail.com', 'joey2310');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `login`
+-- Indexes for table `dispatch`
 --
-ALTER TABLE `login`
+ALTER TABLE `dispatch`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -85,16 +89,16 @@ ALTER TABLE `signup`
 --
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT for table `dispatch`
 --
-ALTER TABLE `login`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `dispatch`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
