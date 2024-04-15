@@ -1,3 +1,6 @@
+<?php
+    include("connection.php")
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -52,48 +55,6 @@
 </div>
 </div>
 </nav>
-<br>
-<br>
-<br>
-<br>
-<div class="row row-cols-2 row-cols-md-5 g-4">
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Dispatch</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="dispatch.php" >Dispatch List</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Purchase Order</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="po.php" >Purchase Order</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Stock</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="stock.php" >Stock</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Outwardmtl</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="out.php" >Outward Mtl</a>
-      </div>
-    </div>
-  </div>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

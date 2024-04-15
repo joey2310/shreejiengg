@@ -2,7 +2,7 @@
     include("connection.php");
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
   <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
   <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-    <a class="navbar-brand" href="index.php"><h2>Shreeji Engineering</h2></a>
+    <a class="navbar-brand" href="home.php"><h1>Shreeji Engineering</h1></a>
     <form class="d-flex mt-1" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success" type="submit">Search</button>
@@ -57,7 +57,7 @@
 </nav>
 <br>
 <br>
-<br>
+<br>  
 <br>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add New Material for Dispatch
@@ -99,7 +99,7 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-outline-primary">View Dispatch List</button>
+<button type="button" class="btn btn-outline-primary">Print Dispatch List</button>
 <br>
 <br>
 <div class="table-responsive-sm">
