@@ -1,3 +1,6 @@
+<?php
+    include("connection.php")
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -56,52 +59,77 @@
 <br>
 <br>
 <br>
-<div class="row row-cols-2 row-cols-md-4 g-3">
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Dispatch</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="dispatch.php" >Dispatch List</a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add New Machine Name
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-l">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Material for Dispatch</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form class="row g-3" action="machine1.php" onsubmit="return isvalid()" method ="POST">
+      <div class="modal-body">
+      <div class="form-floating mb-5">
+  <input type="date" class="form-control" id="floatingInput" name="date" placeholder="name@example.com">
+  <label for="floatingInput">Date</label>
+</div>
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingInput" name="sap" placeholder="name@example.com">
+  <label for="floatingInput">Sap Code</label>
+</div>
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingPassword" name="machine" placeholder="Password">
+  <label for="floatingPassword">Machine Name</label>
+</div>
+<div class="form-floating mb-5">
+  <input type="text" class="form-control" id="floatingPassword" name="discription" placeholder="Password">
+  <label for="floatingPassword">Discription</label>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" name="submit" class="btn btn-primary">Add</button>
+      </div>
+</form>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Purchase Order</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="po.php" >Purchase Order</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Stock</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="stock.php" >Stock</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Machine</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="machine.php" >Machine</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Outwardmtl</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="out.php" >Outward Mtl</a>
-      </div>
-    </div>
-  </div>
+</div>
+
+<div class="table-responsive-sm">
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Date</th>
+      <th scope="col">Sap Code</th>
+      <th scope="col">Machine</th>
+      <th scope="col">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+  <?php
+
+  $sql = "SELECT * FROM machine";
+  $result = mysqli_query($conn, $sql);
+
+  if(!$result){
+    die("INVALID QUERY:".$conn->error);
+  }
+
+  while($row = $result->fetch_assoc()){
+  echo"
+  <tr>
+    <td>" . $row["id"]. "</td>
+    <td>" . $row["date"]. "</td>
+    <td>" . $row["sap"]. "</td>
+    <td>" . $row["machine"]. "</td>
+    <td>" . $row["discription"]. "</td>
+</tr>";
+  }
+?> 
+</tbody>
+</table>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
