@@ -1,5 +1,17 @@
 <?php
     include("connection.php");
+    if(isset($_POST['submit'])){
+        $firstName =  $_POST['firstName'];
+        $lastName =  $_POST['lastName'];
+        $username = $_POST['username'];
+        $dob =  $_POST['dob'];
+        $email =  $_POST['email'];
+        $password =  $_POST['password'];
+
+        $sql = "INSERT INTO signup(firstName, lastName, username, dob, email, password) values('$firstName', '$lastName', '$username', '$dob', '$email', '$password')";
+        header("Location:login.php");
+        $result = mysqli_query($conn, $sql);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +25,7 @@
   <body>
     <div id="form">
         <h1 id="heading">SignUp Form</h1><br>
-        <form class="row g-3" action="signup1.php" onsubmit="return isvalid()" method ="POST">
+        <form class="row g-3" action="signup.php" onsubmit="return isvalid()" method ="POST">
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
     <input type="text" class="form-control" id="firstName" name="firstName" required>

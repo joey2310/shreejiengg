@@ -1,5 +1,15 @@
 <?php
-    include("connection.php")
+    include("connection.php");
+    if(isset($_POST['submit'])){
+        $date =  $_POST['date'];
+        $sap =  $_POST['sap'];
+        $machine=  $_POST['machine'];
+        $discription =  $_POST['discription'];
+
+        $sql = "INSERT INTO machine (date, sap, machine, discription) values('$date', '$sap', '$machine', '$discription' )";
+        header("Location:machine.php");
+        $result = mysqli_query($conn, $sql);
+    }
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -10,51 +20,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-<nav class="navbar bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-  <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-    <a class="navbar-brand" href="home.php"><h1>Shreeji Engineering</h1></a>
-    <form class="d-flex mt-1" role="search">
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success" type="submit">Search</button>
-</form>
-<a class="btn btn-outline-success" type="submit" href="index.php">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Bit More.............</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="dispatch.php">Dispatch List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Final PO List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Outward Material List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Stock List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">New PO List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">PDIR List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Inward Material List</a>
-          </li>
-        </ul>
-    </div>
-</div>
-</div>
-</nav>
+  <?php
+    include("./layouts/nav.php");
+  ?>
 <br>
 <br>
 <br>
@@ -69,7 +37,7 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Material for Dispatch</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form class="row g-3" action="machine1.php" onsubmit="return isvalid()" method ="POST">
+      <form class="row g-3" action="machine.php" onsubmit="return isvalid()" method ="POST">
       <div class="modal-body">
       <div class="form-floating mb-5">
   <input type="date" class="form-control" id="floatingInput" name="date" placeholder="name@example.com">
