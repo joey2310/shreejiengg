@@ -59,19 +59,23 @@
 <div class="row row-cols-2 row-cols-md-4 g-3">
   <div class="col">
     <div class="card">
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">Dispatch</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="dispatch.php" >Dispatch List</a>
+        <p class="card-text">"Dispatch: Your Reliable Connection. We provide efficient and dependable logistical solutions tailored to your needs. Whether it's delivery, transportation, or coordination, trust Dispatch to get the job done swiftly and securely."</p>
+        <div class="text-center">
+          <a class="btn btn-outline-success text-center" href="dispatch.php" >Dispatch List</a>
+        </div>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">Purchase Order</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">"Purchase Order: Streamlining Procurement. A formal document issued by a buyer to a seller, specifying the details of goods or services to be purchased. It serves as a contract, outlining quantities, prices, delivery dates, and terms, facilitating smooth transactions and clear communication between parties."</p>
+        <div class="text-center">
         <a class="btn btn-outline-success" href="po.php" >Purchase Order</a>
+       </div>
       </div>
     </div>
   </div>
@@ -79,8 +83,10 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Stock</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">"Stock: Fueling Markets and Growth. It represents ownership in a corporation and signifies a claim on assets and earnings. Whether it's shares traded on exchanges or inventory held by a business, stock embodies value and potential for investors and businesses alike, driving economic activity and prosperity."</p>
+        <div class="text-center">
         <a class="btn btn-outline-success" href="stock.php" >Stock</a>
+</div>
       </div>
     </div>
   </div>
@@ -89,16 +95,20 @@
       <div class="card-body">
         <h5 class="card-title">Machine</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="text-center">
         <a class="btn btn-outline-success" href="machine.php" >Machine</a>
+</div>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Outwardmtl</h5>
+        <h5 class="card-title">Outward Material</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a class="btn btn-outline-success" href="out.php" >Outward Mtl</a>
+        <div class="text-center">
+        <a class="btn btn-outline-success" href="out.php" >Outward Material</a>
+</div>
       </div>
     </div>
   </div>

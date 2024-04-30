@@ -108,7 +108,7 @@
     <td>" . $row["date"]. "</td>
     <td>" . $row["challan"]. "</td>
     <td>" . $row["num"]. "</td>
-    <td>" . $row["num"]. "</td>
+    <td>" . $row["machine"]. "</td>
     <td>" . $row["sap"]. "</td>
     <td>" . $row["dispatchqty"]. "</td>
     <td>" . $row["date"]. "</td>
@@ -116,7 +116,7 @@
     <td>" . $row["date"]. "</td>
     <td>" . $row["date"]. "</td>
     <td>" . $row["date"]. "</td>
-    <td><button >Edit</button></td>
+    <td><button>Edit</button></td>
     <td><button>Delete</button></td>
 </tr>";
   }

@@ -1,5 +1,17 @@
 <?php
-    include("connection.php")
+    include("connection.php");
+    if(isset($_POST['submit'])){
+        $pono =  $_POST['pono'];
+        $sap =  $_POST['sap'];
+        $discription =  $_POST['discription'];
+        $qty=  $_POST['qty'];
+        $deliverydt=  $_POST['deliverydt'];
+        $postdt=  $_POST['postdt'];
+
+        $sql = "INSERT INTO po (pono, sap, discription, qty,deliverydt, postdt) values('$pono', '$sap', '$discription', '$qty', '$deliverydt', '$postdt')";
+        header("Location:machine.php");
+        $result = mysqli_query($conn, $sql);
+    }
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -38,19 +50,19 @@
   <label for="floatingPassword">Sap Code</label>
 </div>
 <div class="form-floating mb-4">
-  <input type="number" class="form-control" id="floatingPassword" name="description" placeholder="Password">
+  <input type="text" class="form-control" id="floatingPassword" name="discription" placeholder="Password">
   <label for="floatingPassword">Description</label>
 </div>
 <div class="form-floating mb-4">
-  <input type="text" class="form-control" id="floatingInput" name="qty" placeholder="name@example.com">
+  <input type="number" class="form-control" id="floatingInput" name="qty" placeholder="name@example.com">
   <label for="floatingInput">Quantity</label>
 </div>
 <div class="form-floating mb-4">
-  <input type="text" class="form-control" id="floatingPassword" name="deliverydt" placeholder="Password">
+  <input type="date" class="form-control" id="floatingPassword" name="deliverydt" placeholder="Password">
   <label for="floatingPassword">Delivery Date</label>
 </div>
 <div class="form-floating mb-4">
-  <input type="text" class="form-control" id="floatingPassword" name="postdt" placeholder="Password">
+  <input type="date" class="form-control" id="floatingPassword" name="postdt" placeholder="Password">
   <label for="floatingPassword">Posting Date</label>
 </div>
       </div>
@@ -81,6 +93,31 @@
     </tr>
   </thead>
   <tbody>
+  <?php
+
+$sql = "SELECT * FROM po";
+$result = mysqli_query($conn, $sql);
+
+if(!$result){
+  die("INVALID QUERY:".$conn->error);
+}
+
+while($row = $result->fetch_assoc()){
+echo"
+<tr>
+  <td>" . $row["id"]. "</td>
+  <td>" . $row["pono"]. "</td>
+  <td>" . $row["sap"]. "</td>
+  <td>" . $row["discription"]. "</td>
+  <td>" . $row["qty"]. "</td>
+  <td>" . $row["deliverydt"]. "</td>
+  <td>" . $row["postdt"]. "</td>
+  <td>" . $row["postdt"]. "</td>
+  <td><button>Edit</button></td>
+  <td><button>Delete</button></td>
+</tr>";
+}
+?> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
