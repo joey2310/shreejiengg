@@ -1,51 +1,110 @@
 <?php
-    include_once("connection.php")
+    include("connection.php");
+    if(isset($_POST['submit'])){
+        $firstName =  $_POST['firstName'];
+        $lastName =  $_POST['lastName'];
+        $username = $_POST['username'];
+        $dob =  $_POST['dob'];
+        $email =  $_POST['email'];
+        $password =  $_POST['password'];
+
+        $sql = "INSERT INTO signup(firstName, lastName, username, dob, email, password) values('$firstName', '$lastName', '$username', '$dob', '$email', '$password')";
+        header("Location:login.php");
+        $result = mysqli_query($conn, $sql);
+    }
 ?>
 <!doctype html>
-<html lang="en" >
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SHREEJI</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <style>
+    body {
+        font-family: "Inter", sans-serif;
+    }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
-  <body>
-    <div>
-     
 
-    <div>
-        <nav class="navbar sticky-top navbar-expand-lg position-absolute ">
-            <div class="container-fluid">
-            <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-            <a class="navbar-brand mt-2" href="index.php"><h2>SHREEJI ENGINEERING</h2></a>    
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item ms-5 mt-2">
-                        <a class="nav-link active" aria-current="page" href="signup.php"><h4>SIGNUP</h4></a>
-                    </li>
-                    <li class="nav-item ms-5 mt-2">
-                        <a class="nav-link active" aria-current="page" href="login.php"><h4>LOGIN</h4></a>
-                    </li>
-                    <li class="nav-item ms-5 mt-2">
-                        <a class="nav-link active" aria-current="page" href="service.php"><h4>SERVICES</h4></a>
-                    </li>
-                    <li class="nav-item ms-5 mt-2">
-                        <a class="nav-link active" aria-current="page" href="about.php"><h4>ABOUT US</h4></a>
-                    </li>
-                    <li class="nav-item ms-5 mt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0"/>
-                        <a class="ms-5 mt-2 " aria-current="page" ><h4>+91 8834734147</h4></a>
-                    </svg>
-                </li>
-            </ul>
+<body>
+    <div class="w-100">
+        <div class="row w-100 d-flex">
+            <div class="col-md-5">
+                <div class="container text-white p-5">
+            <img src="logo.jpg" alt="Logo" width="150" height="150" class="logo rounded mx-auto d-block img-fluid">
+                    <p class="fst-italic fw-bold" style="font-size:5rem;">SHREEJI ENGINEERING</p>
+                    <div class="footer-social p-5">
+                        <a href="https://www.instagram.com/pratik__2310/"><i class="fab fa-instagram fs-1"></i></a>
+                        <a href="https://www.linkedin.com/in/pratik-bhagat-8379931a7/"><i
+                                class="fab fa-linkedin-in fs-1 ms-5"></i></a>
+                        <a href="https://www.facebook.com/pratik.bhagat.524"><i
+                                class="fab fa-facebook-square fs-1 ms-5"></i></a>
+                        <a href="https://github.com/joey2310"><i class="fab fa-github fs-1 ms-5 "></i></a>
+                        <a href=""><i class="fab fa-whatsapp fs-1 ms-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 p-5 py-5">
+                <div class="card">
+                    <div class="signup__form">
+                        <form class="row g-3" action="index.php" onsubmit="return isvalid()" method="POST">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input class="form-control" type="text" name="firstName" id="firstName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control" type="text" name="lastName" id="lastName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input class="form-control" type="text" name="username" id="username" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input class="form-control" type="date" name="dob" id="dob" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="text" name="email" id="email"
+                                    placeholder="xyz@gmail.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Set Password</label>
+                                <input class="form-control" type="password" name="password" id="password"
+                                    placeholder="********" required />
+                            </div>
+                            <div class="m-t-lg">
+                                <ul class="list-inline">
+                                    <li>
+                                        <button class="btn btn--form" type="submit" value="Register"
+                                            name="Register">Register</button>
+                                    </li>
+                                    <li>
+                                        <a class="signup__link" href="login.php">I am already a member</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav> 
-<img src="bg.jpg" class="img-fluid max-width: 100% height: auto" alt="bg">
-</div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+</body>
+
 </html>

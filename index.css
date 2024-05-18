@@ -1,0 +1,62 @@
+body {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
+}
+
+.signup__form {
+  padding: 2rem;
+  background: #fafafa;
+  border-radius: 20px;
+}
+p{
+  text-align: center;
+  color: #005d50;
+}
+label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #02a08b;
+}
+.form-control {
+  background-color: transparent;
+  border-radius: 20px;
+  &:focus {border-color: #111;}
+}
+[type="text"] {color: #111;}
+[type="password"] {color: #111;}
+.btn--form {
+  padding: .5rem 10rem;
+  margin: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #0cb8a1;
+  border-radius: 35px;
+  &:focus,
+  &:hover { color: white; background-color: #005f52;}
+}
+
+.signup__link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+  &:focus,
+  &:hover {color: darken(#999, 13%);}
+}
+
+.m-t-lg{
+  text-align: center;
+}
+
+.form-group{
+  padding: 5px;
+}
+
+.card{
+  border-radius: 20px;
+}

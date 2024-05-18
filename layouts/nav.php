@@ -1,6 +1,6 @@
 <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
-  <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+  <img src="logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
     <a class="navbar-brand pe-3" href="home.php"><h1>Shreeji Engineering</h1></a>
     <form class="d-flex mt-1" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
