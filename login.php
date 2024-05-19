@@ -49,13 +49,10 @@
                     <p class="fst-italic fw-bold px-5" style="font-size:7rem;">SHREEJI</p>
                     <p class="fst-italic fw-bold" style="font-size:5rem;">ENGINEERING</p>
                     <div class="footer-social d-flex justify-content-evenly align-item-center p-5">
-                        <a href="https://www.instagram.com/pratik__2310/"><i
-                                class="fab fa-instagram fs-1 m-3 text-white"></i></a>
-                        <a href="https://www.linkedin.com/in/pratik-bhagat-8379931a7/"><i
-                                class="fab fa-linkedin-in fs-1 m-3  text-white"></i></a>
-                        <a href="https://www.facebook.com/pratik.bhagat.524"><i
-                                class="fab fa-facebook-square fs-1 m-3  text-white"></i></a>
-                        <a href="https://github.com/joey2310"><i class="fab fa-github fs-1 m-3  text-white"></i></a>
+                        <a href=""><i class="fab fa-instagram fs-1 m-3 text-white"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in fs-1 m-3  text-white"></i></a>
+                        <a href=""><i class="fab fa-facebook-square fs-1 m-3  text-white"></i></a>
+                        <a href=""><i class="fab fa-github fs-1 m-3  text-white"></i></a>
                         <a href=""><i class="fab fa-whatsapp fs-1 m-3  text-white"></i></a>
                     </div>
                 </div>
