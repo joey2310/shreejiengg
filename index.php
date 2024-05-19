@@ -23,9 +23,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
-        rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <style>
@@ -39,22 +36,25 @@
 <body>
     <div class="w-100">
         <div class="row w-100 d-flex">
-            <div class="col-md-5">
+            <div class="col-md-7">
                 <div class="container text-white p-5">
-            <img src="logo.jpg" alt="Logo" width="150" height="150" class="logo rounded mx-auto d-block img-fluid">
-                    <p class="fst-italic fw-bold" style="font-size:5rem;">SHREEJI ENGINEERING</p>
-                    <div class="footer-social p-5">
-                        <a href="https://www.instagram.com/pratik__2310/"><i class="fab fa-instagram fs-1"></i></a>
+                    <img src="logo.jpg" alt="Logo" width="220" height="220"
+                        class="logo rounded mx-auto d-block img-fluid">
+                    <p class="fst-italic fw-bold px-5" style="font-size:7rem;">SHREEJI</p>
+                    <p class="fst-italic fw-bold" style="font-size:5rem;">ENGINEERING</p>
+                    <div class="footer-social d-flex justify-content-evenly align-item-center p-5">
+                        <a href="https://www.instagram.com/pratik__2310/"><i
+                                class="fab fa-instagram fs-1 m-3 text-white"></i></a>
                         <a href="https://www.linkedin.com/in/pratik-bhagat-8379931a7/"><i
-                                class="fab fa-linkedin-in fs-1 ms-5"></i></a>
+                                class="fab fa-linkedin-in fs-1 m-3  text-white"></i></a>
                         <a href="https://www.facebook.com/pratik.bhagat.524"><i
-                                class="fab fa-facebook-square fs-1 ms-5"></i></a>
-                        <a href="https://github.com/joey2310"><i class="fab fa-github fs-1 ms-5 "></i></a>
-                        <a href=""><i class="fab fa-whatsapp fs-1 ms-5"></i></a>
+                                class="fab fa-facebook-square fs-1 m-3  text-white"></i></a>
+                        <a href="https://github.com/joey2310"><i class="fab fa-github fs-1 m-3  text-white"></i></a>
+                        <a href=""><i class="fab fa-whatsapp fs-1 m-3  text-white"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-7 p-5 py-5">
+            <div class="col-md-5 p-5 py-5 d-flex flex-column justify-content-center align-item-center">
                 <div class="card">
                     <div class="signup__form">
                         <form class="row g-3" action="index.php" onsubmit="return isvalid()" method="POST">
@@ -87,8 +87,7 @@
                             <div class="m-t-lg">
                                 <ul class="list-inline">
                                     <li>
-                                        <button class="btn btn--form" type="submit" value="Register"
-                                            name="Register">Register</button>
+                                        <button class="btn btn--form" type="submit" name="submit">Register</button>
                                     </li>
                                     <li>
                                         <a class="signup__link" href="login.php">I am already a member</a>

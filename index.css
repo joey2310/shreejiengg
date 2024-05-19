@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
+    font: 100% "Open Sans", "Roboto", arial, sans-serif;
 }
 
 .signup__form {
@@ -13,7 +13,7 @@ body {
 }
 p{
   text-align: center;
-  color: #005d50;
+  color: white !important;;
 }
 label {
   font-size: 20px;
@@ -55,8 +55,4 @@ label {
 
 .form-group{
   padding: 5px;
-}
-
-.card{
-  border-radius: 20px;
 }
