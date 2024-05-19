@@ -7,28 +7,37 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    body {
+        background-image: url('bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font: 100% "Open Sans", "Roboto", arial, sans-serif;
+    }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary fixed-top">
+    <nav class="navbar fixed-top">
         <div class="container-fluid">
             <img src="logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-            <a class="navbar-brand" href="home.php">
+            <a class="navbar-brand text-black" href="home.php">
                 <h1>Shreeji Engineering</h1>
             </a>
             <form class="d-flex mt-1" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-secondary" type="submit">Search</button>
             </form>
-            <a class="btn btn-outline-success" type="submit" href="index.php">Logout</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            <a class="btn btn-secondary" type="submit" href="index.php">Logout</a>
+            <button class="navbar-toggler bg-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Bit More.............</h3>
+                    <h3 class="offcanvas-title color-black" id="offcanvasNavbarLabel">Bit More.............</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -59,8 +68,8 @@
             </div>
         </div>
     </nav>
-    <div class="bg-white row row-cols-2 row-cols-md-4  pt-5 g-3">
-        <div class="col-3 p-5 w-25">
+    <div class="row row-cols-2 row-cols-md-4  pt-5 g-3">
+        <div class="col-3 px-5 p-5">
             <div class="card">
                 <div class="card-body ">
                     <h5 class="card-title">Dispatch</h5>
@@ -73,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 p-5 w-25">
+        <div class="col-3 px-5 p-5">
             <div class="card">
                 <div class="card-body ">
                     <h5 class="card-title">Purchase Order</h5>
@@ -87,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 p-5 w-25">
+        <div class="col-3 p-5">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Stock</h5>
